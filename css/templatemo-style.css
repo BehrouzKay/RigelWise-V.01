@@ -713,7 +713,7 @@ p {
     top: 80px;
     /*background-color: rgba(255, 255, 255, 0.9);*/
     background-color: rgba(42, 47, 74, 0.7);
-
+    width: 450% !important; /*I added this to expand the navbar*/
     z-index: 1001;
   }
 
