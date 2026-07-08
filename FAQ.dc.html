@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>FAQ — Rigelwise Solutions</title>
+<meta name="description" content="Answers on how Rigelwise engagements work — scope, pricing, timelines and ways of working.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: #F6F4EF; }
+  a { color: #0F3B4A; } a:hover { color: #091A22; }
+  .rw-faq { border-bottom: 1px solid var(--rw-border); }
+  .rw-faq summary { list-style: none; cursor: pointer; display: flex; align-items: flex-start; justify-content: space-between; gap: 24px; padding: clamp(24px,3vw,36px) 0; }
+  .rw-faq summary::-webkit-details-marker { display: none; }
+  .rw-faq .rw-plus { font-family: 'IBM Plex Mono', monospace; font-size: 22px; color: #0F3B4A; transition: transform .4s cubic-bezier(.22,1,.36,1); line-height: 1; flex-shrink: 0; }
+  .rw-faq[open] .rw-plus { transform: rotate(45deg); color: #A57A3F; }
+  .rw-faq summary:hover .rw-q { color: #0F3B4A; }
+  .rw-q { transition: color .35s ease; }
+  .rw-faq .rw-a { overflow: hidden; max-height: 0; opacity: 0; transition: max-height .5s cubic-bezier(.22,1,.36,1), opacity .5s ease, padding .5s ease; }
+  .rw-faq[open] .rw-a { max-height: 400px; opacity: 1; padding: 0 0 clamp(24px,3vw,34px); }
+  [data-reveal] { will-change: opacity, transform; }
+  @media (max-width: 900px){ .rw-2col{ grid-template-columns:1fr !important; } }
+</style>
+</helmet>
+<div style="--rw-bg:#F6F4EF; --rw-bg2:#ECE8E1; --rw-ink:#091A22; --rw-brand:#0F3B4A; --rw-accent:#A57A3F; --rw-text:#18252B; --rw-muted:#6B7478; --rw-border:#D8D4CC; --rw-surface:#FFFFFF; background: var(--rw-bg); color: var(--rw-text); font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; overflow-x: hidden;">
+
+  <dc-import name="SiteNav" active="faq" hint-size="100%,76px"></dc-import>
+
+  <section style="max-width: 1280px; margin: 0 auto; padding: clamp(56px,8vw,110px) clamp(22px,5vw,60px) clamp(40px,5vw,60px);">
+    <p data-reveal style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.26em; text-transform: uppercase; color: var(--rw-muted); margin: 0 0 clamp(24px,3vw,40px); display: flex; align-items: center; gap: 14px;"><span style="width: 26px; height: 1px; background: var(--rw-accent); display: inline-block;"></span>Frequently asked</p>
+    <h1 data-reveal style="font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 400; font-size: clamp(44px,6.6vw,92px); line-height: 1.0; letter-spacing: -0.015em; margin: 0; color: var(--rw-brand);">Questions,<br><span style="font-style: italic; color: var(--rw-ink);">answered plainly.</span></h1>
+  </section>
+
+  <section style="max-width: 1280px; margin: 0 auto; padding: 0 clamp(22px,5vw,60px) clamp(64px,8vw,120px);">
+    <div class="rw-2col" style="display: grid; grid-template-columns: 0.5fr 1.5fr; gap: clamp(28px,5vw,80px); align-items: start;">
+      <p data-reveal style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--rw-muted); margin: 0; position: sticky; top: 100px;">(01) &nbsp;Working with us</p>
+      <div data-reveal style="border-top: 1px solid var(--rw-border);">
+        <details class="rw-faq"><summary><span class="rw-q" style="font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: clamp(21px,2.2vw,29px); color: var(--rw-ink);">Do we have to take every service?</span><span class="rw-plus">+</span></summary><p class="rw-a" style="margin: 0; font-size: 15.5px; line-height: 1.7; color: var(--rw-muted); max-width: 62ch;">No. Most clients begin with strategic consulting or business setup and add services as the expansion progresses. The advantage is that when you do add one, it is delivered by a team that already knows your business.</p></details>
+        <details class="rw-faq"><summary><span class="rw-q" style="font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: clamp(21px,2.2vw,29px); color: var(--rw-ink);">How are engagements priced?</span><span class="rw-plus">+</span></summary><p class="rw-a" style="margin: 0; font-size: 15.5px; line-height: 1.7; color: var(--rw-muted); max-width: 62ch;">Consulting is typically fixed-fee by phase. Operations run on a monthly retainer scaled to activity. Venture-studio engagements can blend fees with an equity or success component. We agree the model before any work begins.</p></details>
+        <details class="rw-faq"><summary><span class="rw-q" style="font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: clamp(21px,2.2vw,29px); color: var(--rw-ink);">How long does a market entry take?</span><span class="rw-plus">+</span></summary><p class="rw-a" style="margin: 0; font-size: 15.5px; line-height: 1.7; color: var(--rw-muted); max-width: 62ch;">A feasibility study takes three to six weeks. A full setup — entity, brand and digital presence — usually reaches trading readiness within three to five months, depending on sector and regulation.</p></details>
+        <details class="rw-faq"><summary><span class="rw-q" style="font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: clamp(21px,2.2vw,29px); color: var(--rw-ink);">Which markets do you cover?</span><span class="rw-plus">+</span></summary><p class="rw-a" style="margin: 0; font-size: 15.5px; line-height: 1.7; color: var(--rw-muted); max-width: 62ch;">Our core is the United Kingdom and the European Union, in both directions — UK firms moving into Europe and European firms establishing in the UK. We take other regions selectively, through vetted local partners.</p></details>
+        <details class="rw-faq"><summary><span class="rw-q" style="font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: clamp(21px,2.2vw,29px); color: var(--rw-ink);">Will you sign an NDA?</span><span class="rw-plus">+</span></summary><p class="rw-a" style="margin: 0; font-size: 15.5px; line-height: 1.7; color: var(--rw-muted); max-width: 62ch;">Always, and gladly. Discretion is central to how we work — a large share of our engagements are never publicly attributed to us at all.</p></details>
+        <details class="rw-faq"><summary><span class="rw-q" style="font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: clamp(21px,2.2vw,29px); color: var(--rw-ink);">Who will we actually work with?</span><span class="rw-plus">+</span></summary><p class="rw-a" style="margin: 0; font-size: 15.5px; line-height: 1.7; color: var(--rw-muted); max-width: 62ch;">A partner leads every engagement personally. We keep our client list deliberately small so senior people stay close to the work rather than delegating it to a junior team.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <dc-import name="SiteFooter" hint-size="100%,620px"></dc-import>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1280,&quot;height&quot;:900}}">
+class Component extends DCLogic {
+  componentDidMount(){
+    const els = Array.from(document.querySelectorAll('[data-reveal]'));
+    if (!('IntersectionObserver' in window) || !els.length) return;
+    els.forEach(el => { el.style.opacity='0'; el.style.transform='translateY(22px)'; el.style.transition='opacity 1s cubic-bezier(.22,1,.36,1), transform 1s cubic-bezier(.22,1,.36,1)'; });
+    const io = new IntersectionObserver((es)=>{ es.forEach(e=>{ if(e.isIntersecting){ e.target.style.opacity='1'; e.target.style.transform='translateY(0)'; io.unobserve(e.target); } }); }, { threshold: 0.1, rootMargin:'0px 0px -6% 0px' });
+    els.forEach(el=>io.observe(el));
+  }
+  renderVals(){ return {}; }
+}
+</script>
+</body>
+</html>

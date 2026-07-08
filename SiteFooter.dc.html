@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  .rw-foot-link { color: #B7BEC1; text-decoration: none; transition: color .35s ease; display: inline-block; }
+  .rw-foot-link:hover { color: #F6F4EF; }
+  .rw-foot-accent:hover { color: #C69A5C !important; }
+</style>
+</helmet>
+<footer style="--rw-bg:#F6F4EF; --rw-ink:#091A22; --rw-brand:#0F3B4A; --rw-accent:#A57A3F; --rw-muted:#6B7478; background: #091A22; color: #F6F4EF; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">
+  <div style="max-width: 1280px; margin: 0 auto; padding: clamp(64px,9vw,120px) clamp(22px,5vw,60px) 0;">
+    <div style="display: grid; grid-template-columns: 1.4fr 1fr; gap: clamp(40px,6vw,90px); align-items: end; padding-bottom: clamp(48px,6vw,80px); border-bottom: 1px solid rgba(246,244,239,0.12);">
+      <div>
+        <p style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.28em; text-transform: uppercase; color: #A57A3F; margin: 0 0 22px;">Begin a conversation</p>
+        <h2 style="font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 400; font-size: clamp(34px,5vw,64px); line-height: 1.04; letter-spacing: -0.01em; margin: 0; color: #F6F4EF;">Let's widen your market,<br><span style="font-style: italic; color: #E7E2D8;">deliberately.</span></h2>
+      </div>
+      <div style="justify-self: start;">
+        <a href="Contact.dc.html" style="display: inline-flex; align-items: center; gap: 12px; text-decoration: none; color: #091A22; background: #F6F4EF; font-size: 14px; letter-spacing: 0.02em; padding: 16px 28px; border-radius: 3px; transition: transform .35s ease, background .35s ease;" onMouseEnter="{{ enter }}" onMouseLeave="{{ leave }}">Start a project <span style="font-family: 'IBM Plex Mono', monospace;">→</span></a>
+        <p style="margin: 22px 0 0; color: #8D959A; font-size: 13.5px; line-height: 1.6;">Or write to us directly<br><a class="rw-foot-link rw-foot-accent" href="mailto:hello@rigelwise.com" style="color:#C7A06A;">hello@rigelwise.com</a></p>
+      </div>
+    </div>
+
+    <div style="display: grid; grid-template-columns: 1.4fr repeat(3, 1fr); gap: clamp(28px,4vw,56px); padding: clamp(48px,6vw,80px) 0;">
+      <div>
+        <div style="display: flex; align-items: baseline; gap: 8px; margin-bottom: 16px;">
+          <span style="font-family: 'Cormorant Garamond', serif; font-size: 24px; font-weight: 500;">Rigelwise</span>
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 9px; letter-spacing: 0.3em; text-transform: uppercase; color: #8D959A;">Solutions</span>
+        </div>
+        <p style="color: #8D959A; font-size: 13.5px; line-height: 1.7; max-width: 300px; margin: 0;">A London venture studio, consultancy and operations partner for businesses expanding into new markets.</p>
+        <p style="color: #6E767B; font-size: 12.5px; line-height: 1.7; margin: 22px 0 0;">42 Berkeley Square<br>Mayfair, London W1J 5AW</p>
+      </div>
+      <div>
+        <p style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.24em; text-transform: uppercase; color: #6E767B; margin: 0 0 18px;">Services</p>
+        <div style="display: flex; flex-direction: column; gap: 11px; font-size: 13.5px;">
+          <a class="rw-foot-link" href="Service-Business-Setup.dc.html">Business Setup</a>
+          <a class="rw-foot-link" href="Service-Brand-IP.dc.html">Brand &amp; IP</a>
+          <a class="rw-foot-link" href="Service-Digital-Presence.dc.html">Digital Presence</a>
+          <a class="rw-foot-link" href="Service-Strategic-Consulting.dc.html">Strategic Consulting</a>
+          <a class="rw-foot-link" href="Services.dc.html">All services →</a>
+        </div>
+      </div>
+      <div>
+        <p style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.24em; text-transform: uppercase; color: #6E767B; margin: 0 0 18px;">Studio</p>
+        <div style="display: flex; flex-direction: column; gap: 11px; font-size: 13.5px;">
+          <a class="rw-foot-link" href="About.dc.html">About</a>
+          <a class="rw-foot-link" href="Portfolio.dc.html">Work</a>
+          <a class="rw-foot-link" href="FAQ.dc.html">FAQ</a>
+          <a class="rw-foot-link" href="Contact.dc.html">Contact</a>
+        </div>
+      </div>
+      <div>
+        <p style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.24em; text-transform: uppercase; color: #6E767B; margin: 0 0 18px;">Connect</p>
+        <div style="display: flex; flex-direction: column; gap: 11px; font-size: 13.5px;">
+          <a class="rw-foot-link" href="#">LinkedIn</a>
+          <a class="rw-foot-link" href="#">Instagram</a>
+          <a class="rw-foot-link" href="mailto:hello@rigelwise.com">Email</a>
+          <a class="rw-foot-link" href="tel:+442070000000">+44 20 7000 0000</a>
+        </div>
+      </div>
+    </div>
+
+    <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px; padding: 26px 0 34px; border-top: 1px solid rgba(246,244,239,0.12); color: #6E767B; font-size: 12px;">
+      <span>© 2026 Rigelwise Solutions Ltd. Registered in England &amp; Wales.</span>
+      <span style="display: flex; gap: 22px;">
+        <a class="rw-foot-link" href="Privacy.dc.html" style="font-size:12px;">Privacy</a>
+        <a class="rw-foot-link" href="Terms.dc.html" style="font-size:12px;">Terms</a>
+        <span style="font-family: 'IBM Plex Mono', monospace; letter-spacing: 0.1em;">51.5094° N, 0.1478° W</span>
+      </span>
+    </div>
+  </div>
+</footer>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:&quot;100%&quot;,&quot;height&quot;:&quot;620px&quot;}}">
+class Component extends DCLogic {
+  enter = (e) => { e.currentTarget.style.background = '#C7A06A'; e.currentTarget.style.transform = 'translateY(-1px)'; };
+  leave = (e) => { e.currentTarget.style.background = '#F6F4EF'; e.currentTarget.style.transform = 'translateY(0)'; };
+  renderVals(){ return { enter: this.enter, leave: this.leave }; }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>Page not found — Rigelwise Solutions</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>body{margin:0;background:#F6F4EF;} a{color:#0F3B4A;} a:hover{color:#091A22;} .rw-b:hover{background:#091A22 !important;transform:translateY(-1px);} .rw-b{transition:background .35s ease, transform .35s ease;}</style>
+</helmet>
+<div style="--rw-bg:#F6F4EF; --rw-ink:#091A22; --rw-brand:#0F3B4A; --rw-accent:#A57A3F; --rw-text:#18252B; --rw-muted:#6B7478; --rw-border:#D8D4CC; background: var(--rw-bg); color: var(--rw-text); font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; min-height: 100vh; display: flex; flex-direction: column;">
+  <dc-import name="SiteNav" hint-size="100%,76px"></dc-import>
+  <section style="flex: 1; display: flex; align-items: center; justify-content: center; padding: clamp(60px,10vw,140px) clamp(22px,5vw,60px); text-align: center;">
+    <div style="max-width: 640px;">
+      <p style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.3em; text-transform: uppercase; color: var(--rw-muted); margin: 0 0 28px;">Error · 404</p>
+      <h1 style="font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 400; font-size: clamp(56px,10vw,140px); line-height: 0.95; letter-spacing: -0.02em; margin: 0; color: var(--rw-brand);">Off the<br><span style="font-style: italic; color: var(--rw-ink);">map.</span></h1>
+      <p style="margin: clamp(28px,4vw,40px) 0 0; font-size: 16.5px; line-height: 1.65; color: var(--rw-muted);">This page has moved, or never existed. Let's get you back to familiar ground.</p>
+      <div style="display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; margin-top: clamp(32px,4vw,44px);">
+        <a class="rw-b" href="Home.dc.html" style="text-decoration: none; color: var(--rw-bg); background: var(--rw-brand); font-size: 14px; padding: 15px 28px; border-radius: 3px;">Return home</a>
+        <a href="Services.dc.html" style="text-decoration: none; color: var(--rw-text); border: 1px solid var(--rw-border); font-size: 14px; padding: 15px 28px; border-radius: 3px;">Browse services</a>
+      </div>
+    </div>
+  </section>
+  <dc-import name="SiteFooter" hint-size="100%,620px"></dc-import>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1280,&quot;height&quot;:760}}"></script>
+</body>
+</html>

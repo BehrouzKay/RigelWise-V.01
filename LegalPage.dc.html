@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  .rw-toc a { display: block; padding: 7px 0; font-size: 13.5px; color: #6B7478; text-decoration: none; border-left: 1px solid #D8D4CC; padding-left: 16px; transition: color .3s ease, border-color .3s ease; }
+  .rw-toc a:hover { color: #0F3B4A; border-color: #0F3B4A; }
+  .rw-legal-body p { font-size: 15.5px; line-height: 1.75; color: #444C50; margin: 0 0 16px; max-width: 68ch; }
+  @media (max-width: 900px){ .rw-legal-grid{ grid-template-columns:1fr !important; } .rw-toc{ position: static !important; } }
+</style>
+</helmet>
+<div style="--rw-bg:#F6F4EF; --rw-bg2:#ECE8E1; --rw-ink:#091A22; --rw-brand:#0F3B4A; --rw-accent:#A57A3F; --rw-text:#18252B; --rw-muted:#6B7478; --rw-border:#D8D4CC; background: var(--rw-bg); color: var(--rw-text); font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased;">
+  <section style="max-width: 1280px; margin: 0 auto; padding: clamp(52px,7vw,96px) clamp(22px,5vw,60px) clamp(32px,4vw,48px); border-bottom: 1px solid var(--rw-border);">
+    <p style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.26em; text-transform: uppercase; color: var(--rw-muted); margin: 0 0 clamp(20px,3vw,32px); display: flex; align-items: center; gap: 14px;"><span style="width: 26px; height: 1px; background: var(--rw-accent); display: inline-block;"></span>Legal</p>
+    <h1 style="font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 400; font-size: clamp(40px,5.6vw,80px); line-height: 1.0; letter-spacing: -0.015em; margin: 0; color: var(--rw-brand);">{{ doc.title }}</h1>
+    <p style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: var(--rw-muted); margin: 22px 0 0;">Last updated · {{ doc.updated }}</p>
+  </section>
+
+  <section style="max-width: 1280px; margin: 0 auto; padding: clamp(40px,5vw,72px) clamp(22px,5vw,60px) clamp(64px,8vw,110px);">
+    <div class="rw-legal-grid" style="display: grid; grid-template-columns: 0.5fr 1.5fr; gap: clamp(32px,5vw,80px); align-items: start;">
+      <nav class="rw-toc" style="position: sticky; top: 100px; display: flex; flex-direction: column;">
+        <sc-for list="{{ doc.sections }}" as="s" hint-placeholder-count="5">
+          <a href="#{{ s.id }}">{{ s.n }}</a>
+        </sc-for>
+      </nav>
+      <div class="rw-legal-body">
+        <sc-for list="{{ doc.sections }}" as="s" hint-placeholder-count="5">
+          <div id="{{ s.id }}" style="margin-bottom: clamp(36px,4vw,52px); scroll-margin-top: 100px;">
+            <h2 style="font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: clamp(24px,2.6vw,32px); margin: 0 0 18px; color: var(--rw-ink);">{{ s.n }}</h2>
+            <sc-for list="{{ s.body }}" as="para" hint-placeholder-count="2">
+              <p>{{ para }}</p>
+            </sc-for>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1280,&quot;height&quot;:760},&quot;doc&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;privacy&quot;,&quot;terms&quot;],&quot;default&quot;:&quot;privacy&quot;,&quot;tsType&quot;:&quot;string&quot;}}">
+class Component extends DCLogic {
+  _docs(){
+    return {
+      privacy: {
+        title: "Privacy Policy", updated: "January 2026",
+        sections: [
+          { id:"collect", n:"1 · Information we collect", body:["We collect information you provide directly — such as your name, company, email address and the details of your enquiry when you contact us or engage our services.","We also collect limited technical data automatically, including your IP address, browser type and pages viewed, through privacy-respecting analytics."] },
+          { id:"use", n:"2 · How we use it", body:["We use your information to respond to enquiries, deliver and administer our services, meet legal and regulatory obligations, and improve our website.","We do not sell your personal data, and we do not share it with third parties except trusted processors acting on our instructions, or where required by law."] },
+          { id:"legal", n:"3 · Legal basis", body:["We process personal data under the bases set out in the UK GDPR — principally the performance of a contract, our legitimate interests in operating the business, and your consent where applicable."] },
+          { id:"retention", n:"4 · Retention", body:["We keep personal data only as long as necessary for the purposes for which it was collected, and to satisfy legal, accounting and reporting requirements."] },
+          { id:"rights", n:"5 · Your rights", body:["You have the right to access, correct, erase or restrict the processing of your personal data, and to object to processing or request portability. To exercise any of these rights, write to hello@rigelwise.com."] },
+          { id:"contact", n:"6 · Contact", body:["Questions about this policy can be directed to Rigelwise Solutions Ltd, 42 Berkeley Square, Mayfair, London W1J 5AW, or by email to hello@rigelwise.com."] }
+        ]
+      },
+      terms: {
+        title: "Terms of Service", updated: "January 2026",
+        sections: [
+          { id:"intro", n:"1 · Introduction", body:["These terms govern your use of the Rigelwise Solutions website and any services provided by Rigelwise Solutions Ltd, a company registered in England and Wales. By using this site you accept these terms."] },
+          { id:"services", n:"2 · Our services", body:["Any advisory, studio or operational services are governed by a separate written engagement agreement. Nothing on this website constitutes an offer, a warranty of outcome, or professional advice on which you should rely without engaging us."] },
+          { id:"ip", n:"3 · Intellectual property", body:["All content on this website — text, design, marks and layout — is owned by Rigelwise Solutions Ltd or its licensors and may not be reproduced without written permission."] },
+          { id:"liability", n:"4 · Liability", body:["To the fullest extent permitted by law, we exclude liability for any indirect or consequential loss arising from use of this website. Nothing in these terms limits liability for fraud or for death or personal injury caused by negligence."] },
+          { id:"law", n:"5 · Governing law", body:["These terms are governed by the laws of England and Wales, and the courts of England and Wales have exclusive jurisdiction over any dispute."] },
+          { id:"changes", n:"6 · Changes", body:["We may update these terms from time to time. The version published on this page is the one in effect."] }
+        ]
+      }
+    };
+  }
+  renderVals(){
+    const doc = this._docs()[this.props.doc || 'privacy'];
+    return { doc };
+  }
+}
+</script>
+</body>
+</html>
