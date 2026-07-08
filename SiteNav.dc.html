@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  .rw-nav-link { position: relative; }
+  .rw-nav-link::after { content: ""; position: absolute; left: 0; bottom: -4px; height: 1px; width: 0; background: currentColor; transition: width .4s cubic-bezier(.22,1,.36,1); }
+  .rw-nav-link:hover::after { width: 100%; }
+  .rw-nav-link[data-active="true"]::after { width: 100%; background: var(--rw-accent); }
+</style>
+</helmet>
+<header ref="{{ headerRef }}" style="--rw-bg:#F6F4EF; --rw-ink:#091A22; --rw-brand:#0F3B4A; --rw-accent:#A57A3F; --rw-text:#18252B; --rw-muted:#6B7478; --rw-border:#D8D4CC; position: sticky; top: 0; z-index: 1000; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; background: rgba(246,244,239,0.72); backdrop-filter: saturate(180%) blur(14px); -webkit-backdrop-filter: saturate(180%) blur(14px); border-bottom: 1px solid var(--rw-border); transition: background .5s ease, border-color .5s ease;">
+  <div style="max-width: 1280px; margin: 0 auto; padding: 0 clamp(22px,5vw,60px); height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 32px;">
+    <a href="Home.dc.html" style="display: flex; align-items: baseline; gap: 9px; text-decoration: none; color: var(--rw-ink);">
+      <span style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: 25px; font-weight: 500; letter-spacing: 0.01em; line-height: 1;">Rigelwise</span>
+      <span style="font-family: 'IBM Plex Mono', monospace; font-size: 9.5px; letter-spacing: 0.32em; text-transform: uppercase; color: var(--rw-muted); position: relative; top: -1px;">Solutions</span>
+    </a>
+    <nav style="display: flex; align-items: center; gap: clamp(20px,2.6vw,40px);" data-nav-desktop>
+      <a class="rw-nav-link" data-key="work" href="Portfolio.dc.html" style="text-decoration: none; color: var(--rw-text); font-size: 13.5px; letter-spacing: 0.01em;">Work</a>
+      <a class="rw-nav-link" data-key="services" href="Services.dc.html" style="text-decoration: none; color: var(--rw-text); font-size: 13.5px; letter-spacing: 0.01em;">Services</a>
+      <a class="rw-nav-link" data-key="about" href="About.dc.html" style="text-decoration: none; color: var(--rw-text); font-size: 13.5px; letter-spacing: 0.01em;">About</a>
+      <a class="rw-nav-link" data-key="faq" href="FAQ.dc.html" style="text-decoration: none; color: var(--rw-text); font-size: 13.5px; letter-spacing: 0.01em;">FAQ</a>
+      <a class="rw-cta" href="Contact.dc.html" style="text-decoration: none; color: var(--rw-bg); background: var(--rw-brand); font-size: 13px; letter-spacing: 0.02em; padding: 11px 22px; border-radius: 3px; transition: background .35s ease, transform .35s ease;" onMouseEnter="{{ ctaEnter }}" onMouseLeave="{{ ctaLeave }}">Start a project</a>
+    </nav>
+    <button aria-label="Menu" onClick="{{ toggleMenu }}" data-nav-burger style="display: none; background: none; border: none; cursor: pointer; padding: 8px; color: var(--rw-ink); flex-direction: column; gap: 5px;">
+      <span style="display: block; width: 24px; height: 1.5px; background: currentColor;"></span>
+      <span style="display: block; width: 24px; height: 1.5px; background: currentColor;"></span>
+    </button>
+  </div>
+  <div ref="{{ panelRef }}" style="display: none; overflow: hidden; max-height: 0; transition: max-height .5s cubic-bezier(.22,1,.36,1); background: var(--rw-bg); border-top: 1px solid var(--rw-border);">
+    <div style="padding: 14px clamp(22px,5vw,60px) 26px; display: flex; flex-direction: column; gap: 4px;">
+      <a href="Portfolio.dc.html" style="text-decoration: none; color: var(--rw-text); font-size: 20px; font-family: 'Cormorant Garamond', serif; padding: 10px 0; border-bottom: 1px solid var(--rw-border);">Work</a>
+      <a href="Services.dc.html" style="text-decoration: none; color: var(--rw-text); font-size: 20px; font-family: 'Cormorant Garamond', serif; padding: 10px 0; border-bottom: 1px solid var(--rw-border);">Services</a>
+      <a href="About.dc.html" style="text-decoration: none; color: var(--rw-text); font-size: 20px; font-family: 'Cormorant Garamond', serif; padding: 10px 0; border-bottom: 1px solid var(--rw-border);">About</a>
+      <a href="FAQ.dc.html" style="text-decoration: none; color: var(--rw-text); font-size: 20px; font-family: 'Cormorant Garamond', serif; padding: 10px 0; border-bottom: 1px solid var(--rw-border);">FAQ</a>
+      <a href="Contact.dc.html" style="text-decoration: none; color: var(--rw-bg); background: var(--rw-brand); font-size: 15px; padding: 14px 0; text-align: center; border-radius: 3px; margin-top: 12px;">Start a project</a>
+    </div>
+  </div>
+</header>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:&quot;100%&quot;,&quot;height&quot;:&quot;90px&quot;},&quot;active&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;home&quot;,&quot;work&quot;,&quot;services&quot;,&quot;about&quot;,&quot;faq&quot;,&quot;contact&quot;],&quot;default&quot;:&quot;home&quot;,&quot;tsType&quot;:&quot;string&quot;}}">
+class Component extends DCLogic {
+  constructor(p){ super(p); this.headerRef = React.createRef(); this.panelRef = React.createRef(); this.state = { open: false }; }
+  componentDidMount(){
+    // active link
+    const active = this.props.active;
+    if (active && this.headerRef.current){
+      const el = this.headerRef.current.querySelector('[data-key="'+active+'"]');
+      if (el){ el.setAttribute('data-active','true'); }
+    }
+    // responsive burger
+    this._mq = window.matchMedia('(max-width: 860px)');
+    this._apply = () => {
+      const h = this.headerRef.current; if(!h) return;
+      const desk = h.querySelector('[data-nav-desktop]');
+      const burg = h.querySelector('[data-nav-burger]');
+      const panel = this.panelRef.current;
+      if (this._mq.matches){ desk.style.display='none'; burg.style.display='flex'; panel.style.display='block'; }
+      else { desk.style.display='flex'; burg.style.display='none'; panel.style.display='none'; this.setState({open:false}); }
+    };
+    this._apply();
+    this._mq.addEventListener('change', this._apply);
+    // scroll shadow
+    this._onScroll = () => {
+      const h = this.headerRef.current; if(!h) return;
+      if (window.scrollY > 12){ h.style.background='rgba(246,244,239,0.9)'; h.style.borderColor='#CFCABF'; }
+      else { h.style.background='rgba(246,244,239,0.72)'; h.style.borderColor='#D8D4CC'; }
+    };
+    window.addEventListener('scroll', this._onScroll, { passive:true });
+  }
+  componentWillUnmount(){ if(this._mq) this._mq.removeEventListener('change', this._apply); window.removeEventListener('scroll', this._onScroll); }
+  toggleMenu = () => {
+    const next = !this.state.open; this.setState({ open: next });
+    const panel = this.panelRef.current; if(!panel) return;
+    panel.style.maxHeight = next ? panel.scrollHeight + 'px' : '0px';
+  };
+  ctaEnter = (e) => { e.currentTarget.style.background = '#091A22'; e.currentTarget.style.transform = 'translateY(-1px)'; };
+  ctaLeave = (e) => { e.currentTarget.style.background = '#0F3B4A'; e.currentTarget.style.transform = 'translateY(0)'; };
+  renderVals(){
+    return { headerRef: this.headerRef, panelRef: this.panelRef, toggleMenu: this.toggleMenu, ctaEnter: this.ctaEnter, ctaLeave: this.ctaLeave };
+  }
+}
+</script>
+</body>
+</html>
