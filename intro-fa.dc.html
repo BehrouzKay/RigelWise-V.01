@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>Rigelwise Solutions — ورود به بازارهای جدید</title>
+<meta name="description" content="با استراتژی درست و اجرای حرفه‌ای، ورود به بازارهای جدید غیرممکن نیست. Rigelwise Solutions به کسب‌وکارها در ورود به بازار بریتانیا و اروپا کمک می‌کند.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IBM+Plex+Mono:wght@400;500&family=Vazirmatn:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: #F6F4EF; }
+  a { color: #0F3B4A; }
+  a:hover { color: #091A22; }
+  .fa-text { font-family: 'Vazirmatn', Tahoma, Arial, sans-serif; direction: rtl; }
+  .rw-btn-primary { transition: background .35s ease, transform .35s ease; }
+  .rw-btn-primary:hover { background: #091A22 !important; transform: translateY(-1px); }
+  .rw-btn-ghost { transition: border-color .35s ease, color .35s ease, background .35s ease; }
+  .rw-btn-ghost:hover { border-color: #0F3B4A !important; background: #ECE8E1; }
+  [data-reveal] { will-change: opacity, transform; }
+  .rw-ticker-track { display: inline-flex; gap: 56px; padding-right: 56px; animation: rw-marquee 34s linear infinite; }
+  @keyframes rw-marquee { to { transform: translateX(-50%); } }
+  .rw-video-card { transition: transform .5s cubic-bezier(.22,1,.36,1); }
+  .rw-video-card:hover { transform: translateY(-4px); }
+  .rw-video-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(20px,3vw,36px); }
+  @media (max-width: 980px){
+    .rw-video-grid { grid-template-columns: repeat(2, 1fr) !important; }
+  }
+  @media (max-width: 620px){
+    .rw-video-grid { grid-template-columns: 1fr !important; }
+  }
+</style>
+</helmet>
+<div style="--rw-bg:#F6F4EF; --rw-bg2:#ECE8E1; --rw-ink:#091A22; --rw-brand:#0F3B4A; --rw-accent:#A57A3F; --rw-text:#18252B; --rw-muted:#6B7478; --rw-border:#D8D4CC; --rw-surface:#FFFFFF; background: var(--rw-bg); color: var(--rw-text); font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; overflow-x: hidden;">
+
+  <dc-import name="SiteNav" hint-size="100%,76px"></dc-import>
+
+  <!-- VIDEO HERO -->
+  <section style="max-width: 1280px; margin: 0 auto; padding: clamp(44px,7vw,80px) clamp(22px,5vw,60px) 0; text-align: center;">
+    <p data-reveal class="fa-text" style="font-size: clamp(17px,2.2vw,22px); font-weight: 600; line-height: 1.7; color: var(--rw-ink); margin: 0 auto clamp(24px,4vw,36px); max-width: 760px;">با استراتژی درست و اجرای حرفه‌ای، ورود به بازارهای جدید غیرممکن نیست</p>
+  </section>
+
+  <section style="width: 100%;">
+    <div data-reveal style="position: relative; width: 100%; aspect-ratio: 16/9; background: #000;">
+      <iframe src="https://www.youtube.com/embed/VStvZjykQ00" title="Rigelwise Solutions" style="position: absolute; inset: 0; width: 100%; height: 100%; border: 0;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+    </div>
+  </section>
+
+  <section style="max-width: 1280px; margin: 0 auto; padding: clamp(28px,4vw,44px) clamp(22px,5vw,60px) clamp(56px,7vw,90px); text-align: center;">
+    <div data-reveal style="display: flex; flex-wrap: wrap; gap: 14px; justify-content: center;">
+      <a class="rw-btn-primary fa-text" href="Portfolio.dc.html" style="text-decoration: none; color: var(--rw-bg); background: var(--rw-brand); font-size: 15px; font-weight: 600; letter-spacing: 0; padding: 15px 28px; border-radius: 3px;">مشاهده کارهای ما</a>
+      <a class="rw-btn-ghost fa-text" href="Services.dc.html" style="text-decoration: none; color: var(--rw-text); border: 1px solid var(--rw-border); font-size: 15px; font-weight: 600; letter-spacing: 0; padding: 15px 28px; border-radius: 3px;">خدمات ما</a>
+    </div>
+  </section>
+
+  <!-- SECTOR TICKER -->
+  <section style="border-top: 1px solid var(--rw-border); border-bottom: 1px solid var(--rw-border); overflow: hidden; background: var(--rw-bg);">
+    <div style="display: flex; white-space: nowrap; padding: 18px 0; font-family: 'IBM Plex Mono', monospace; font-size: 12.5px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--rw-muted);">
+      <div class="rw-ticker-track">
+        <span>Healthcare</span><span style="color:var(--rw-accent)">◆</span><span>Luxury</span><span style="color:var(--rw-accent)">◆</span><span>Property</span><span style="color:var(--rw-accent)">◆</span><span>Professional Services</span><span style="color:var(--rw-accent)">◆</span><span>Jewellery</span><span style="color:var(--rw-accent)">◆</span><span>Hospitality</span><span style="color:var(--rw-accent)">◆</span><span>Architecture</span><span style="color:var(--rw-accent)">◆</span><span>Retail</span><span style="color:var(--rw-accent)">◆</span>
+      </div>
+      <div class="rw-ticker-track" aria-hidden="true">
+        <span>Healthcare</span><span style="color:var(--rw-accent)">◆</span><span>Luxury</span><span style="color:var(--rw-accent)">◆</span><span>Property</span><span style="color:var(--rw-accent)">◆</span><span>Professional Services</span><span style="color:var(--rw-accent)">◆</span><span>Jewellery</span><span style="color:var(--rw-accent)">◆</span><span>Hospitality</span><span style="color:var(--rw-accent)">◆</span><span>Architecture</span><span style="color:var(--rw-accent)">◆</span><span>Retail</span><span style="color:var(--rw-accent)">◆</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- VIDEO GRID -->
+  <section style="max-width: 1280px; margin: 0 auto; padding: clamp(64px,8vw,120px) clamp(22px,5vw,60px);">
+    <div data-reveal style="max-width: 700px; margin: 0 auto clamp(40px,5vw,64px); text-align: center;">
+      <p style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.26em; text-transform: uppercase; color: var(--rw-muted); margin: 0 0 18px;">Watch</p>
+      <h2 style="font-family: 'Cormorant Garamond', serif; font-weight: 400; font-size: clamp(34px,5vw,56px); line-height: 1.05; letter-spacing: -0.01em; margin: 0; color: var(--rw-ink);">Inside the work.</h2>
+    </div>
+    <div class="rw-video-grid" data-reveal>
+      <div class="rw-video-card">
+        <div style="position: relative; width: 100%; aspect-ratio: 16/9; border-radius: 4px; overflow: hidden; border: 1px solid var(--rw-border); background:#000;">
+          <iframe src="https://www.youtube.com/embed/VStvZjykQ00" title="Inside Rigelwise: how we structure a market entry" style="position:absolute; inset:0; width:100%; height:100%; border:0;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+        </div>
+        <p style="margin: 14px 0 0; font-family: 'Cormorant Garamond', serif; font-size: 19px; line-height: 1.3; color: var(--rw-ink);">Inside Rigelwise: how we structure a market entry</p>
+      </div>
+      <div class="rw-video-card">
+        <div style="position: relative; width: 100%; aspect-ratio: 16/9; border-radius: 4px; overflow: hidden; border: 1px solid var(--rw-border); background:#000;">
+          <iframe src="https://www.youtube.com/embed/VStvZjykQ00" title="Business Setup: what to expect in your first 30 days" style="position:absolute; inset:0; width:100%; height:100%; border:0;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+        </div>
+        <p style="margin: 14px 0 0; font-family: 'Cormorant Garamond', serif; font-size: 19px; line-height: 1.3; color: var(--rw-ink);">Business Setup: what to expect in your first 30 days</p>
+      </div>
+      <div class="rw-video-card">
+        <div style="position: relative; width: 100%; aspect-ratio: 16/9; border-radius: 4px; overflow: hidden; border: 1px solid var(--rw-border); background:#000;">
+          <iframe src="https://www.youtube.com/embed/VStvZjykQ00" title="Brand and IP: protecting your name before you launch" style="position:absolute; inset:0; width:100%; height:100%; border:0;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+        </div>
+        <p style="margin: 14px 0 0; font-family: 'Cormorant Garamond', serif; font-size: 19px; line-height: 1.3; color: var(--rw-ink);">Brand &amp; IP: protecting your name before you launch</p>
+      </div>
+      <div class="rw-video-card">
+        <div style="position: relative; width: 100%; aspect-ratio: 16/9; border-radius: 4px; overflow: hidden; border: 1px solid var(--rw-border); background:#000;">
+          <iframe src="https://www.youtube.com/embed/VStvZjykQ00" title="Digital Presence: building for a market that doesn't know you yet" style="position:absolute; inset:0; width:100%; height:100%; border:0;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+        </div>
+        <p style="margin: 14px 0 0; font-family: 'Cormorant Garamond', serif; font-size: 19px; line-height: 1.3; color: var(--rw-ink);">Digital Presence: building for a market that doesn't know you yet</p>
+      </div>
+      <div class="rw-video-card">
+        <div style="position: relative; width: 100%; aspect-ratio: 16/9; border-radius: 4px; overflow: hidden; border: 1px solid var(--rw-border); background:#000;">
+          <iframe src="https://www.youtube.com/embed/VStvZjykQ00" title="Marketing and Advertising: positioning for a new audience" style="position:absolute; inset:0; width:100%; height:100%; border:0;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+        </div>
+        <p style="margin: 14px 0 0; font-family: 'Cormorant Garamond', serif; font-size: 19px; line-height: 1.3; color: var(--rw-ink);">Marketing &amp; Advertising: positioning for a new audience</p>
+      </div>
+      <div class="rw-video-card">
+        <div style="position: relative; width: 100%; aspect-ratio: 16/9; border-radius: 4px; overflow: hidden; border: 1px solid var(--rw-border); background:#000;">
+          <iframe src="https://www.youtube.com/embed/VStvZjykQ00" title="Strategic Consulting: testing the market before you commit" style="position:absolute; inset:0; width:100%; height:100%; border:0;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+        </div>
+        <p style="margin: 14px 0 0; font-family: 'Cormorant Garamond', serif; font-size: 19px; line-height: 1.3; color: var(--rw-ink);">Strategic Consulting: testing the market before you commit</p>
+      </div>
+      <div class="rw-video-card">
+        <div style="position: relative; width: 100%; aspect-ratio: 16/9; border-radius: 4px; overflow: hidden; border: 1px solid var(--rw-border); background:#000;">
+          <iframe src="https://www.youtube.com/embed/VStvZjykQ00" title="Sales: building distribution from zero" style="position:absolute; inset:0; width:100%; height:100%; border:0;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+        </div>
+        <p style="margin: 14px 0 0; font-family: 'Cormorant Garamond', serif; font-size: 19px; line-height: 1.3; color: var(--rw-ink);">Sales: building distribution from zero</p>
+      </div>
+      <div class="rw-video-card">
+        <div style="position: relative; width: 100%; aspect-ratio: 16/9; border-radius: 4px; overflow: hidden; border: 1px solid var(--rw-border); background:#000;">
+          <iframe src="https://www.youtube.com/embed/VStvZjykQ00" title="Export, Import and Customs: moving goods without the delays" style="position:absolute; inset:0; width:100%; height:100%; border:0;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+        </div>
+        <p style="margin: 14px 0 0; font-family: 'Cormorant Garamond', serif; font-size: 19px; line-height: 1.3; color: var(--rw-ink);">Export, Import &amp; Customs: moving goods without the delays</p>
+      </div>
+      <div class="rw-video-card">
+        <div style="position: relative; width: 100%; aspect-ratio: 16/9; border-radius: 4px; overflow: hidden; border: 1px solid var(--rw-border); background:#000;">
+          <iframe src="https://www.youtube.com/embed/VStvZjykQ00" title="Accountancy: getting the numbers right from day one" style="position:absolute; inset:0; width:100%; height:100%; border:0;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+        </div>
+        <p style="margin: 14px 0 0; font-family: 'Cormorant Garamond', serif; font-size: 19px; line-height: 1.3; color: var(--rw-ink);">Accountancy: getting the numbers right from day one</p>
+      </div>
+      <div class="rw-video-card">
+        <div style="position: relative; width: 100%; aspect-ratio: 16/9; border-radius: 4px; overflow: hidden; border: 1px solid var(--rw-border); background:#000;">
+          <iframe src="https://www.youtube.com/embed/VStvZjykQ00" title="Logistics and Warehouse: fulfilment built for a new market" style="position:absolute; inset:0; width:100%; height:100%; border:0;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+        </div>
+        <p style="margin: 14px 0 0; font-family: 'Cormorant Garamond', serif; font-size: 19px; line-height: 1.3; color: var(--rw-ink);">Logistics &amp; Warehouse: fulfilment built for a new market</p>
+      </div>
+      <div class="rw-video-card">
+        <div style="position: relative; width: 100%; aspect-ratio: 16/9; border-radius: 4px; overflow: hidden; border: 1px solid var(--rw-border); background:#000;">
+          <iframe src="https://www.youtube.com/embed/VStvZjykQ00" title="Events and Exhibitions: making a confident first impression" style="position:absolute; inset:0; width:100%; height:100%; border:0;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+        </div>
+        <p style="margin: 14px 0 0; font-family: 'Cormorant Garamond', serif; font-size: 19px; line-height: 1.3; color: var(--rw-ink);">Events &amp; Exhibitions: making a confident first impression</p>
+      </div>
+      <div class="rw-video-card">
+        <div style="position: relative; width: 100%; aspect-ratio: 16/9; border-radius: 4px; overflow: hidden; border: 1px solid var(--rw-border); background:#000;">
+          <iframe src="https://www.youtube.com/embed/VStvZjykQ00" title="Case study: Aurelle Maison's European launch" style="position:absolute; inset:0; width:100%; height:100%; border:0;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+        </div>
+        <p style="margin: 14px 0 0; font-family: 'Cormorant Garamond', serif; font-size: 19px; line-height: 1.3; color: var(--rw-ink);">Case study: Aurelle Maison's European launch</p>
+      </div>
+    </div>
+  </section>
+
+  <dc-import name="SiteFooter" hint-size="100%,620px"></dc-import>
+
+  <template id="__bundler_thumbnail" data-bg-color="#F6F4EF">
+    <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+      <rect width="1200" height="800" fill="#F6F4EF"/>
+      <text x="600" y="440" font-family="Georgia, 'Times New Roman', serif" font-size="300" fill="#0F3B4A" text-anchor="middle">R</text>
+      <rect x="500" y="520" width="200" height="3" fill="#A57A3F"/>
+      <text x="600" y="580" font-family="monospace" font-size="26" letter-spacing="14" fill="#6B7478" text-anchor="middle">RIGELWISE</text>
+    </svg>
+  </template>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1280,&quot;height&quot;:900}}">
+class Component extends DCLogic {
+  componentDidMount(){
+    const els = Array.from(document.querySelectorAll('[data-reveal]'));
+    if (!('IntersectionObserver' in window) || !els.length) return;
+    els.forEach((el, i) => {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(22px)';
+      el.style.transition = 'opacity 1s cubic-bezier(.22,1,.36,1), transform 1s cubic-bezier(.22,1,.36,1)';
+    });
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting){
+          const el = entry.target;
+          el.style.opacity = '1';
+          el.style.transform = 'translateY(0)';
+          io.unobserve(el);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+    els.forEach(el => io.observe(el));
+  }
+  renderVals(){ return {}; }
+}
+</script>
+</body>
+</html>
