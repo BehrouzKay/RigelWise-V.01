@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard | Rigelwise CMS</title>
+<link rel="stylesheet" href="css/cms.css">
+</head>
+<body>
+  <div class="cms-shell">
+
+    <aside class="cms-sidebar">
+      <div class="brand">
+        <div class="mark">R</div>
+        <div class="word">Rigelwise<br>CMS</div>
+      </div>
+
+      <div class="nav-group-label">Content</div>
+      <a class="nav-item" data-active="true" href="modules/create-post.html">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 5v14M5 12h14"/></svg></span>
+        Create Post
+      </a>
+      <a class="nav-item" href="modules/manage-sections.html">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3 3 8l9 5 9-5-9-5Z"/><path d="m3 13 9 5 9-5"/></svg></span>
+        Manage Sections
+      </a>
+
+      <div class="nav-group-label">Coming soon</div>
+      <span class="nav-item" data-disabled="true" title="Not built yet">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 4h9l4 4v12a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1z"/><path d="M14 4v4h4"/></svg></span>
+        Edit Pages
+        <span class="soon">Soon</span>
+      </span>
+      <span class="nav-item" data-disabled="true" title="Not built yet">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="4" width="18" height="16" rx="1.5"/><circle cx="8.5" cy="10" r="1.6"/><path d="m21 16-5-5-4 4-3-3-6 6"/></svg></span>
+        Media Library
+        <span class="soon">Soon</span>
+      </span>
+
+      <div class="sidebar-foot">
+        <div class="sidebar-user">
+          <span class="avatar" id="userInitial">–</span>
+          <span id="userName">—</span>
+        </div>
+        <button class="btn btn-ghost btn-sm" id="logoutBtn" style="width:100%; color: rgba(246,244,239,0.8); border-color: rgba(246,244,239,0.24);">Sign out</button>
+      </div>
+    </aside>
+
+    <main class="cms-main">
+      <div class="cms-topbar">
+        <div>
+          <p class="crumb">Dashboard</p>
+          <h1>Welcome back<span id="welcomeName"></span>.</h1>
+        </div>
+      </div>
+
+      <div class="cms-content">
+        <div class="card" style="display:flex; align-items:center; justify-content:space-between; gap: 20px; flex-wrap: wrap;">
+          <div>
+            <h3>Create a new post</h3>
+            <p class="card-desc" style="margin-bottom:0;">Cover image, tags, overview and a project flow — published as a standalone page in <code>/posts/</code>.</p>
+          </div>
+          <a class="btn" href="modules/create-post.html">
+            New post
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 13L13 3M13 3H5M13 3V11"/></svg>
+          </a>
+        </div>
+
+        <div class="card">
+          <h3>Modules</h3>
+          <p class="card-desc">This panel is built to grow. Create Post and Manage Sections are wired up today; the rest are placeholders reserved for later.</p>
+          <div class="stat-grid" style="margin-bottom:0;">
+            <div class="stat-card">
+              <div class="n" style="font-size:18px;">Create Post</div>
+              <div class="l">Active</div>
+            </div>
+            <div class="stat-card">
+              <div class="n" style="font-size:18px;">Manage Sections</div>
+              <div class="l">Active</div>
+            </div>
+            <div class="stat-card">
+              <div class="n" style="font-size:18px; color: var(--muted);">Edit Pages</div>
+              <div class="l">Not yet built</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="js/auth.js"></script>
+  <script src="js/auth-guard.js"></script>
+  <script>
+    (function () {
+      "use strict";
+      var user = window.__RW_CURRENT_USER__;
+      if (user) {
+        document.getElementById("userName").textContent = user.displayName;
+        document.getElementById("userInitial").textContent = user.displayName.charAt(0).toUpperCase();
+        document.getElementById("welcomeName").textContent = ", " + user.displayName;
+      }
+      document.getElementById("logoutBtn").addEventListener("click", function () {
+        window.RWAuth.endSession();
+        window.location.href = "login.html";
+      });
+    })();
+  </script>
+</body>
+</html>

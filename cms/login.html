@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sign in | Rigelwise CMS</title>
+<link rel="stylesheet" href="css/cms.css">
+</head>
+<body>
+  <div class="auth-screen">
+    <div class="auth-card">
+      <div class="auth-logo">
+        <div class="mark">R</div>
+        <div class="word">Rigelwise<br>CMS</div>
+      </div>
+
+      <h1 class="auth-title">Sign in</h1>
+      <p class="auth-sub">Content management for Rigelwise Solutions.</p>
+
+      <div class="auth-error" data-visible="false" id="authError">
+        Incorrect username or password. Please try again.
+      </div>
+
+      <form id="loginForm" novalidate>
+        <div class="field">
+          <label for="username">Username</label>
+          <input type="text" id="username" name="username" autocomplete="username" required>
+        </div>
+        <div class="field">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" autocomplete="current-password" required>
+        </div>
+        <button type="submit" class="btn btn-block">Sign in</button>
+      </form>
+
+      <div class="auth-demo">
+        Demo accounts — replace before real use:<br>
+        <code>admin</code> / <code>admin123</code> &nbsp;or&nbsp; <code>editor</code> / <code>editor123</code>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/auth.js"></script>
+  <script>
+    (function () {
+      "use strict";
+      var form = document.getElementById("loginForm");
+      var errorBox = document.getElementById("authError");
+
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        var username = document.getElementById("username").value.trim();
+        var password = document.getElementById("password").value;
+
+        var result = window.RWAuth.authenticate(username, password);
+        if (result.ok) {
+          window.RWAuth.startSession(result.user);
+          window.location.href = "dashboard.html";
+        } else {
+          errorBox.setAttribute("data-visible", "true");
+        }
+      });
+
+      // Hide the error again once the person starts correcting their input.
+      ["username", "password"].forEach(function (id) {
+        document.getElementById(id).addEventListener("input", function () {
+          errorBox.setAttribute("data-visible", "false");
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
