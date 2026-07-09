@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>Work — Rigelwise Solutions</title>
+<meta name="description" content="Selected market-entry work across jewellery, healthcare, property, hospitality and professional services.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: #F6F4EF; }
+  a { color: #0F3B4A; } a:hover { color: #091A22; }
+  .rw-case { transition: transform .6s cubic-bezier(.22,1,.36,1); }
+  .rw-case:hover { transform: translateY(-6px); }
+  .rw-case:hover .rw-case-media { transform: scale(1.03); }
+  .rw-case:hover .rw-case-title { color: #0F3B4A; }
+  .rw-case-media { transition: transform .9s cubic-bezier(.22,1,.36,1); }
+  .rw-case-title { transition: color .4s ease; }
+  [data-reveal] { will-change: opacity, transform; }
+  @media (max-width: 900px){ .rw-2col{ grid-template-columns:1fr !important; } .rw-hd{ grid-template-columns:1fr !important; } }
+</style>
+</helmet>
+<div style="--rw-bg:#F6F4EF; --rw-bg2:#ECE8E1; --rw-ink:#091A22; --rw-brand:#0F3B4A; --rw-accent:#A57A3F; --rw-text:#18252B; --rw-muted:#6B7478; --rw-border:#D8D4CC; --rw-surface:#FFFFFF; background: var(--rw-bg); color: var(--rw-text); font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; overflow-x: hidden;">
+
+  <dc-import name="SiteNav" active="work" hint-size="100%,76px"></dc-import>
+
+  <!-- HEADER -->
+  <section style="max-width: 1280px; margin: 0 auto; padding: clamp(56px,8vw,110px) clamp(22px,5vw,60px) clamp(36px,4vw,56px);">
+    <div class="rw-hd" style="display: grid; grid-template-columns: 1.5fr 1fr; gap: clamp(28px,5vw,64px); align-items: end;">
+      <div>
+        <p data-reveal style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.26em; text-transform: uppercase; color: var(--rw-muted); margin: 0 0 clamp(24px,3vw,40px); display: flex; align-items: center; gap: 14px;"><span style="width: 26px; height: 1px; background: var(--rw-accent); display: inline-block;"></span>Selected work</p>
+        <h1 data-reveal style="font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 400; font-size: clamp(44px,6.6vw,92px); line-height: 1.0; letter-spacing: -0.015em; margin: 0; color: var(--rw-brand);">Quiet work for<br><span style="font-style: italic; color: var(--rw-ink);">discerning clients.</span></h1>
+      </div>
+      <p data-reveal style="font-size: clamp(15px,1.1vw,17px); line-height: 1.65; color: var(--rw-text); margin: 0;">A selection of the market entries we can name. Much of our work stays behind our clients' brands, by design.</p>
+    </div>
+  </section>
+
+  <!-- CASE GRID -->
+  <section style="max-width: 1280px; margin: 0 auto; padding: 0 clamp(22px,5vw,60px) clamp(64px,8vw,120px);">
+    <div id="rw-portfolio-grid" class="rw-2col" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: clamp(28px,3.5vw,52px);">
+      <a class="rw-case" data-reveal href="Contact.dc.html" style="text-decoration: none; color: inherit; display: block;">
+        <div style="overflow: hidden; border-radius: 5px; border: 1px solid var(--rw-border);"><div class="rw-case-media" style="aspect-ratio: 4/3; background: repeating-linear-gradient(135deg, #E8E3DB, #E8E3DB 12px, #E1DBD1 12px, #E1DBD1 24px); display:flex; align-items:flex-end; padding:18px;"><span style="font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:0.16em; text-transform:uppercase; color:var(--rw-muted); background:rgba(246,244,239,0.85); padding:5px 9px; border-radius:2px;">Image · Aurelle Maison</span></div></div>
+        <div style="display:flex; justify-content:space-between; gap:16px; margin-top:20px;"><div><p style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:var(--rw-accent); margin:0 0 8px;">Jewellery · Retail</p><h2 class="rw-case-title" style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:clamp(24px,2.6vw,34px); margin:0; color:var(--rw-ink);">Aurelle Maison — European launch</h2></div><span style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:var(--rw-muted); white-space:nowrap;">2025</span></div>
+        <p style="margin:12px 0 0; font-size:14.5px; color:var(--rw-muted); line-height:1.6; max-width:90%;">Entity setup, brand system and retail rollout across three EU capitals — first boutique trading within nine months.</p>
+      </a>
+      <a class="rw-case" data-reveal href="Contact.dc.html" style="text-decoration: none; color: inherit; display: block;">
+        <div style="overflow: hidden; border-radius: 5px; border: 1px solid var(--rw-border);"><div class="rw-case-media" style="aspect-ratio: 4/3; background: repeating-linear-gradient(135deg, #E8E3DB, #E8E3DB 12px, #E1DBD1 12px, #E1DBD1 24px); display:flex; align-items:flex-end; padding:18px;"><span style="font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:0.16em; text-transform:uppercase; color:var(--rw-muted); background:rgba(246,244,239,0.85); padding:5px 9px; border-radius:2px;">Image · Meridian Clinics</span></div></div>
+        <div style="display:flex; justify-content:space-between; gap:16px; margin-top:20px;"><div><p style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:var(--rw-accent); margin:0 0 8px;">Healthcare</p><h2 class="rw-case-title" style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:clamp(24px,2.6vw,34px); margin:0; color:var(--rw-ink);">Meridian Clinics — UK expansion</h2></div><span style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:var(--rw-muted); white-space:nowrap;">2024</span></div>
+        <p style="margin:12px 0 0; font-size:14.5px; color:var(--rw-muted); line-height:1.6; max-width:90%;">Regulatory pathway, digital booking platform and multi-site operations for a private specialist group.</p>
+      </a>
+      <a class="rw-case" data-reveal href="Contact.dc.html" style="text-decoration: none; color: inherit; display: block;">
+        <div style="overflow: hidden; border-radius: 5px; border: 1px solid var(--rw-border);"><div class="rw-case-media" style="aspect-ratio: 4/3; background: repeating-linear-gradient(135deg, #E8E3DB, #E8E3DB 12px, #E1DBD1 12px, #E1DBD1 24px); display:flex; align-items:flex-end; padding:18px;"><span style="font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:0.16em; text-transform:uppercase; color:var(--rw-muted); background:rgba(246,244,239,0.85); padding:5px 9px; border-radius:2px;">Image · Halden &amp; Crowe</span></div></div>
+        <div style="display:flex; justify-content:space-between; gap:16px; margin-top:20px;"><div><p style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:var(--rw-accent); margin:0 0 8px;">Property</p><h2 class="rw-case-title" style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:clamp(24px,2.6vw,34px); margin:0; color:var(--rw-ink);">Halden &amp; Crowe — London office</h2></div><span style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:var(--rw-muted); white-space:nowrap;">2024</span></div>
+        <p style="margin:12px 0 0; font-size:14.5px; color:var(--rw-muted); line-height:1.6; max-width:90%;">A Zurich property developer's UK arm — from incorporation to a live sales operation in Mayfair.</p>
+      </a>
+      <a class="rw-case" data-reveal href="Contact.dc.html" style="text-decoration: none; color: inherit; display: block;">
+        <div style="overflow: hidden; border-radius: 5px; border: 1px solid var(--rw-border);"><div class="rw-case-media" style="aspect-ratio: 4/3; background: repeating-linear-gradient(135deg, #E8E3DB, #E8E3DB 12px, #E1DBD1 12px, #E1DBD1 24px); display:flex; align-items:flex-end; padding:18px;"><span style="font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:0.16em; text-transform:uppercase; color:var(--rw-muted); background:rgba(246,244,239,0.85); padding:5px 9px; border-radius:2px;">Image · Casa Vittoria</span></div></div>
+        <div style="display:flex; justify-content:space-between; gap:16px; margin-top:20px;"><div><p style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:var(--rw-accent); margin:0 0 8px;">Hospitality</p><h2 class="rw-case-title" style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:clamp(24px,2.6vw,34px); margin:0; color:var(--rw-ink);">Casa Vittoria — restaurant group</h2></div><span style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:var(--rw-muted); white-space:nowrap;">2023</span></div>
+        <p style="margin:12px 0 0; font-size:14.5px; color:var(--rw-muted); line-height:1.6; max-width:90%;">Brand, licensing, supply logistics and launch events for an Italian group's first London sites.</p>
+      </a>
+    </div>
+  </section>
+
+  <!-- CTA (dark) -->
+  <section style="background: var(--rw-ink); color: var(--rw-bg);">
+    <div style="max-width: 1280px; margin: 0 auto; padding: clamp(56px,7vw,110px) clamp(22px,5vw,60px); display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 28px;">
+      <h2 data-reveal style="font-family: 'Cormorant Garamond', serif; font-weight: 400; font-size: clamp(30px,4.4vw,58px); line-height: 1.05; letter-spacing: -0.01em; margin: 0; color: var(--rw-bg); max-width: 16ch;">Your expansion could be the <span style="font-style: italic; color: var(--rw-accent);">next one here.</span></h2>
+      <a data-reveal href="Contact.dc.html" style="text-decoration: none; color: var(--rw-ink); background: var(--rw-bg); font-size: 14px; padding: 16px 28px; border-radius: 3px; white-space: nowrap;">Start a project →</a>
+    </div>
+  </section>
+
+  <dc-import name="SiteFooter" hint-size="100%,620px"></dc-import>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1280,&quot;height&quot;:900}}">
+class Component extends DCLogic {
+  componentDidMount(){
+    // #rw-portfolio-grid is React-managed (this page is rendered via
+    // support.js/React), so dynamic case-study cards must be injected
+    // here, after React's own mount — not from a plain deferred
+    // <script> tag, which React would silently overwrite right after.
+    if (window.RWRenderPortfolioWork) window.RWRenderPortfolioWork();
+
+    const els = Array.from(document.querySelectorAll('[data-reveal]'));
+    if (!('IntersectionObserver' in window) || !els.length) return;
+    els.forEach(el => { el.style.opacity='0'; el.style.transform='translateY(22px)'; el.style.transition='opacity 1s cubic-bezier(.22,1,.36,1), transform 1s cubic-bezier(.22,1,.36,1)'; });
+    const io = new IntersectionObserver((es)=>{ es.forEach(e=>{ if(e.isIntersecting){ e.target.style.opacity='1'; e.target.style.transform='translateY(0)'; io.unobserve(e.target); } }); }, { threshold: 0.1, rootMargin:'0px 0px -6% 0px' });
+    els.forEach(el=>io.observe(el));
+  }
+  renderVals(){ return {}; }
+}
+</script>
+<script src="portfolio-work.js"></script>
+</body>
+</html>
