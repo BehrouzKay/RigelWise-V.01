@@ -35,15 +35,42 @@
     <h1 data-reveal style="font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 400; font-size: clamp(42px,6.2vw,92px); line-height: 1.02; letter-spacing: -0.015em; margin: 0; color: var(--rw-brand); max-width: 15ch;">One partner for the <span style="font-style: italic; color: var(--rw-ink);">whole journey</span> into a new market.</h1>
   </section>
 
-  <!-- FULL IMAGE -->
-  <section style="max-width: 1280px; margin: 0 auto; padding: 0 clamp(22px,5vw,60px);">
-    <video autoplay muted loop playsinline class="hero-media">
-    <source src="img/london.mp4" type="video/mp4">
+  <!-- FULL VIDEO -->
+<section style="max-width: 1280px; margin: 0 auto; padding: 0 clamp(22px,5vw,60px);">
+  <div style="position: relative; aspect-ratio: 16/7; width: 100%; border: 1px solid var(--rw-border); border-radius: 5px; overflow: hidden;">
+
+    <!-- VIDEO -->
+    <video autoplay muted loop playsinline style="
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    ">
+      <source src="img/london.mp4" type="video/mp4">
     </video>
-    <div data-reveal style="aspect-ratio: 16/7; width: 100%; border: 1px solid var(--rw-border); border-radius: 5px; background: repeating-linear-gradient(135deg, #ECE8E1, #ECE8E1 13px, #E5E0D7 13px, #E5E0D7 26px); display: flex; align-items: flex-end; padding: 22px;">
-      <span style="font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--rw-muted); background: rgba(246,244,239,0.85); padding: 6px 10px; border-radius: 2px;">Image · studio &amp; team, Mayfair</span>
-    </div>
-  </section>
+
+    <!-- LABEL -->
+    <span style="
+      position: absolute;
+      bottom: 22px;
+      left: 22px;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 10.5px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--rw-muted);
+      background: rgba(246,244,239,0.85);
+      padding: 6px 10px;
+      border-radius: 2px;
+      z-index: 2;
+    ">
+      Video · London Aerial
+    </span>
+
+  </div>
+</section>
+
 
   <!-- STORY -->
   <section style="max-width: 1280px; margin: 0 auto; padding: clamp(56px,7vw,110px) clamp(22px,5vw,60px);">
