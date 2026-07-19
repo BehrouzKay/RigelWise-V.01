@@ -2,6 +2,7 @@
 const SERVICES = {
   "strategic-consulting": {
     index: "01", title: "Strategic Consulting", file: "Service-Strategic-Consulting.dc.html",
+    heroImage: "img/services/strategy.jpg",
     tagline: "Where to grow — and whether it holds up.",
     intro: "Before a single euro is committed, we pressure-test the ambition. Market sizing, competitive reality, unit economics and entry sequencing — turned into a decision you can defend to a board.",
     included: [
@@ -25,6 +26,7 @@ const SERVICES = {
   },
   "business-setup": {
     index: "02", title: "Business Setup", file: "Service-Business-Setup.dc.html",
+    heroImage: "img/services/business-setup.jpg",
     tagline: "Entity, licensing and compliant entry.",
     intro: "The unglamorous foundations that everything else stands on. We incorporate, license and register your operation so it is legitimate, tax-efficient and ready to trade from day one.",
     included: [
