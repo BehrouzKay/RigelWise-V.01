@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  .rw-inc-card { transition: transform .5s cubic-bezier(.22,1,.36,1), background .5s ease; }
+  .rw-inc-card:hover { transform: translateY(-4px); background: #ECE8E1; }
+  .rw-next:hover .rw-next-title { color: #A57A3F; }
+  .rw-next:hover .rw-next-arrow { transform: translateX(6px); }
+  .rw-next-title { transition: color .4s ease; }
+  .rw-next-arrow { transition: transform .5s cubic-bezier(.22,1,.36,1); }
+  [data-reveal] { will-change: opacity, transform; }
+  @media (max-width: 900px){ .rw-sd-2{ grid-template-columns:1fr !important; } .rw-sd-4{ grid-template-columns:repeat(2,1fr) !important; } .rw-sd-3{ grid-template-columns:1fr !important; } }
+  @media (max-width: 560px){ .rw-sd-4{ grid-template-columns:1fr !important; } }
+</style>
+</helmet>
+<div style="--rw-bg:#F6F4EF; --rw-bg2:#ECE8E1; --rw-ink:#091A22; --rw-brand:#0F3B4A; --rw-accent:#A57A3F; --rw-text:#18252B; --rw-muted:#6B7478; --rw-border:#D8D4CC; --rw-surface:#FFFFFF; background: var(--rw-bg); color: var(--rw-text); font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">
+
+  <!-- HERO -->
+  <section style="max-width: 1280px; margin: 0 auto; padding: clamp(48px,7vw,96px) clamp(22px,5vw,60px) clamp(36px,4vw,56px);">
+    <p data-reveal style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--rw-muted); margin: 0 0 clamp(28px,4vw,44px);"><a href="Services.dc.html" style="color: var(--rw-muted); text-decoration: none;">Services</a> &nbsp;/&nbsp; <span style="color: var(--rw-accent);">{{ svc.index }}</span></p>
+    <div class="rw-sd-2" style="display: grid; grid-template-columns: 1.5fr 1fr; gap: clamp(28px,5vw,72px); align-items: end;">
+      <h1 data-reveal style="font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 400; font-size: clamp(44px,6.4vw,88px); line-height: 1.0; letter-spacing: -0.015em; margin: 0; color: var(--rw-brand);">{{ svc.title }}</h1>
+      <p data-reveal style="font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: clamp(19px,1.8vw,26px); line-height: 1.35; color: var(--rw-ink); margin: 0;">{{ svc.tagline }}</p>
+    </div>
+    <div data-reveal style="margin-top: clamp(36px,5vw,64px); aspect-ratio: 21/8; width: 100%; border: 1px solid var(--rw-border); border-radius: 5px; overflow: hidden; display: {{ heroImgDisplay }};">
+      <img src="{{ heroImage }}" alt="{{ svc.title }}" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+    </div>
+    <div data-reveal style="margin-top: clamp(36px,5vw,64px); aspect-ratio: 21/8; width: 100%; border: 1px solid var(--rw-border); border-radius: 5px; background: repeating-linear-gradient(135deg, #ECE8E1, #ECE8E1 13px, #E5E0D7 13px, #E5E0D7 26px); display: {{ heroPhDisplay }}; align-items: flex-end; padding: 22px;">
+      <span style="font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--rw-muted); background: rgba(246,244,239,0.85); padding: 6px 10px; border-radius: 2px;">Image · {{ svc.title }}</span>
+    </div>
+  </section>
+
+  <!-- INTRO -->
+  <section style="max-width: 1280px; margin: 0 auto; padding: clamp(48px,6vw,90px) clamp(22px,5vw,60px);">
+    <div class="rw-sd-2" style="display: grid; grid-template-columns: 0.9fr 1.6fr; gap: clamp(28px,6vw,90px);">
+      <p data-reveal style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.26em; text-transform: uppercase; color: var(--rw-muted); margin: 0;">Overview</p>
+      <p data-reveal style="font-family: 'Cormorant Garamond', serif; font-weight: 400; font-size: clamp(24px,3vw,40px); line-height: 1.32; letter-spacing: -0.01em; margin: 0; color: var(--rw-ink);">{{ svc.intro }}</p>
+    </div>
+  </section>
+
+  <!-- WHAT'S INCLUDED -->
+  <section style="background: var(--rw-bg2); border-top: 1px solid var(--rw-border); border-bottom: 1px solid var(--rw-border);">
+    <div style="max-width: 1280px; margin: 0 auto; padding: clamp(56px,7vw,110px) clamp(22px,5vw,60px);">
+      <p data-reveal style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.26em; text-transform: uppercase; color: var(--rw-muted); margin: 0 0 clamp(32px,4vw,52px);">(01) &nbsp;What's included</p>
+      <div class="rw-sd-4" data-reveal style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; background: var(--rw-border); border: 1px solid var(--rw-border); border-radius: 6px; overflow: hidden;">
+        <sc-for list="{{ svc.included }}" as="item" hint-placeholder-count="4">
+          <div class="rw-inc-card" style="background: var(--rw-surface); padding: clamp(26px,3vw,40px); min-height: 180px; display: flex; flex-direction: column; gap: 14px;">
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: var(--rw-accent);">0{{ item.itemNum }}</span>
+            <h3 style="font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: clamp(21px,2.1vw,27px); margin: 0; color: var(--rw-ink);">{{ item.t }}</h3>
+            <p style="margin: 0; font-size: 14px; color: var(--rw-muted); line-height: 1.6;">{{ item.d }}</p>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section style="max-width: 1280px; margin: 0 auto; padding: clamp(56px,7vw,110px) clamp(22px,5vw,60px);">
+    <p data-reveal style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.26em; text-transform: uppercase; color: var(--rw-muted); margin: 0 0 clamp(32px,4vw,52px);">(02) &nbsp;How it works</p>
+    <div class="rw-sd-4" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: clamp(20px,3vw,40px);">
+      <sc-for list="{{ svc.steps }}" as="step" hint-placeholder-count="4">
+        <div data-reveal style="border-top: 1px solid var(--rw-border); padding-top: 22px;">
+          <p style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: var(--rw-accent); margin: 0 0 16px;">0{{ step.stepNum }}</p>
+          <h3 style="font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: clamp(20px,2.1vw,26px); margin: 0 0 12px; color: var(--rw-ink);">{{ step.t }}</h3>
+          <p style="margin: 0; font-size: 14px; color: var(--rw-muted); line-height: 1.6;">{{ step.d }}</p>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <!-- OUTCOMES (dark) -->
+  <section style="background: var(--rw-ink); color: var(--rw-bg);">
+    <div style="max-width: 1280px; margin: 0 auto; padding: clamp(56px,7vw,110px) clamp(22px,5vw,60px);">
+      <p data-reveal style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.26em; text-transform: uppercase; color: var(--rw-accent); margin: 0 0 clamp(32px,4vw,52px);">(03) &nbsp;What you can expect</p>
+      <div class="rw-sd-3" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(24px,4vw,56px);">
+        <sc-for list="{{ svc.outcomes }}" as="o" hint-placeholder-count="3">
+          <div data-reveal style="border-top: 1px solid rgba(246,244,239,0.18); padding-top: 24px;">
+            <p style="font-family: 'Cormorant Garamond', serif; font-weight: 400; font-size: clamp(40px,5vw,68px); line-height: 1; margin: 0; color: var(--rw-bg);">{{ o.n }}</p>
+            <p style="margin: 14px 0 0; font-size: 14px; color: #A9B0B4; line-height: 1.5;">{{ o.l }}</p>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEXT + CTA -->
+  <section style="max-width: 1280px; margin: 0 auto; padding: clamp(56px,7vw,110px) clamp(22px,5vw,60px);">
+    <div class="rw-sd-2" style="display: grid; grid-template-columns: 1fr 1fr; gap: clamp(20px,3vw,32px);">
+      <a class="rw-next" href="{{ nextFile }}" style="display: flex; flex-direction: column; justify-content: space-between; gap: 40px; min-height: 200px; padding: clamp(28px,3vw,40px); border: 1px solid var(--rw-border); border-radius: 6px; background: var(--rw-surface); text-decoration: none; color: var(--rw-text);">
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--rw-muted);">Next service</span>
+        <span style="display: flex; align-items: flex-end; justify-content: space-between; gap: 16px;"><span class="rw-next-title" style="font-family: 'Cormorant Garamond', serif; font-size: clamp(24px,2.6vw,34px); color: var(--rw-ink);">{{ nextTitle }}</span><span class="rw-next-arrow" style="font-family: 'IBM Plex Mono', monospace; font-size: 18px; color: var(--rw-brand);">→</span></span>
+      </a>
+      <a class="rw-next" href="Contact.dc.html" style="display: flex; flex-direction: column; justify-content: space-between; gap: 40px; min-height: 200px; padding: clamp(28px,3vw,40px); border-radius: 6px; background: var(--rw-brand); text-decoration: none; color: var(--rw-bg);">
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(246,244,239,0.6);">Start here</span>
+        <span style="display: flex; align-items: flex-end; justify-content: space-between; gap: 16px;"><span style="font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: clamp(24px,2.6vw,34px); color: var(--rw-bg); max-width: 340px; line-height: 1.1;">Discuss {{ svc.title }} for your business</span><span class="rw-next-arrow" style="font-family: 'IBM Plex Mono', monospace; font-size: 18px; color: var(--rw-accent);">→</span></span>
+      </a>
+    </div>
+  </section>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1280,&quot;height&quot;:900},&quot;slug&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;strategic-consulting&quot;,&quot;business-setup&quot;,&quot;brand-ip&quot;,&quot;digital-presence&quot;,&quot;marketing&quot;,&quot;sales&quot;,&quot;export-import&quot;,&quot;accountancy&quot;,&quot;logistics&quot;,&quot;events&quot;],&quot;default&quot;:&quot;strategic-consulting&quot;,&quot;tsType&quot;:&quot;string&quot;}}">
+class Component extends DCLogic {
+  state = { svc: null, next: null };
+  async componentDidMount(){
+    let data = (typeof window !== 'undefined' && window.RW_SERVICES) ? window.RW_SERVICES : null;
+    if (!data){ try { const m = await import('./services-data.js'); data = m.default || m.SERVICES; } catch(e){ data = null; } }
+    if (!data) return;
+    const slug = this.props.slug || 'strategic-consulting';
+    const svc = data[slug];
+    const next = svc ? data[svc.next] : null;
+    this.setState({ svc, next });
+    this._reveal();
+  }
+  _reveal(){
+    requestAnimationFrame(() => {
+      const els = Array.from(document.querySelectorAll('[data-reveal]'));
+      if (!('IntersectionObserver' in window) || !els.length) return;
+      els.forEach(el => { if(el.dataset._r) return; el.dataset._r='1'; el.style.opacity='0'; el.style.transform='translateY(22px)'; el.style.transition='opacity 1s cubic-bezier(.22,1,.36,1), transform 1s cubic-bezier(.22,1,.36,1)'; });
+      const io = new IntersectionObserver((es)=>{ es.forEach(e=>{ if(e.isIntersecting){ e.target.style.opacity='1'; e.target.style.transform='translateY(0)'; io.unobserve(e.target); } }); }, { threshold: 0.1, rootMargin:'0px 0px -6% 0px' });
+      els.forEach(el=>io.observe(el));
+    });
+  }
+  renderVals(){
+    const svc = this.state.svc || { index:'', title:'', tagline:'', intro:'', included:[], steps:[], outcomes:[] };
+    const included = (svc.included||[]).map((item,i)=>({ ...item, itemNum: i+1 }));
+    const steps = (svc.steps||[]).map((step,i)=>({ ...step, stepNum: i+1 }));
+    const next = this.state.next;
+    return {
+      svc: { ...svc, included, steps },
+      heroImage: svc.heroImage || 'data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==',
+      heroImgDisplay: svc.heroImage ? 'block' : 'none',
+      heroPhDisplay: svc.heroImage ? 'none' : 'flex',
+      nextFile: next ? next.file : 'Services.dc.html',
+      nextTitle: next ? next.title : 'All services'
+    };
+  }
+}
+</script>
+</body>
+</html>
